@@ -1,0 +1,31 @@
+﻿<Window x:Class="Calendar_Black_Out_Assignment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calendar_Black_Out_Assignment"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Calendar x:Name="myCalendar" HorizontalAlignment="Left" Margin="77,128,0,0" 
+                  VerticalAlignment="Top"
+                  SelectionMode="SingleDate"
+                  SelectedDatesChanged="myCalendar_SelectedDatesChanged"/>
+        <Calendar x:Name="mySecondCalendar" HorizontalAlignment="Left" Margin="322,131,0,0" 
+                  VerticalAlignment="Top" 
+                  SelectionMode="SingleDate"/>
+        <Label x:Name="labelResult" Content="[ResultLabel]" HorizontalAlignment="Left" Height="65" Margin="216,335,0,0" VerticalAlignment="Top" Width="142" FontSize="20" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.476"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.773"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="button" Content="Push" HorizontalAlignment="Left" Height="58" Margin="543,297,0,0" VerticalAlignment="Top" Width="109" FontSize="20" Click="button_Click"/>
+        <Calendar x:Name="blackOutCalendar" HorizontalAlignment="Left" Height="183" Margin="539,53,0,0" VerticalAlignment="Top" Width="188"/>
+
+    </Grid>
+</Window>
